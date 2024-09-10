@@ -593,7 +593,6 @@ section.bg-sky{
     background-repeat:no-repeat;
     background-position: center;
     width: 100%;
-    filter:grayscale(50%);
 }
 .historico hr{
     padding-top:0px;
@@ -611,4 +610,10 @@ section.bg-sky{
 
 .disquete p{
     font-size:1.4em;
+}
+
+.card-imagem{
+    background-repeat:no-repeat; 
+    background-size:cover;
+     height: 150px;
 }

@@ -1,3 +1,8 @@
+<?php
+//if (!array_key_exists(array_search($_SESSION['historico'], ['materia'=>'SQL',"tipo"=>"Linguagem de Programação","link"=>"/sql"]),$_SESSION['historico'])) {
+  array_push($_SESSION["historico"], ['materia'=>'SQL',"tipo"=>"Linguagem de Programação","link"=>"/sql"]);
+//}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

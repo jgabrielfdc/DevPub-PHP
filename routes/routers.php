@@ -33,7 +33,13 @@ $routes = [
         '/intro' => fn() => load('ControllerList', "intro"),
         '/equipe' => fn() => load('ControllerList', "equipe"),
         '/sql' => fn() => load('ControllerList', "sql"),
-        '/logout' => fn() => load('ControllerList', "logout")
+        '/logout' => fn() => load('ControllerList', "logout"),
+        "/info"=> fn() => load("ControllerList", "info"),
+        "/css"=> fn() => load("ControllerList", "css"),
+        "/bootstrap"=> fn() => load("ControllerList", "bootstrap"),
+        "/angular"=> fn() => load("ControllerList", "angular"),
+        "/sass"=> fn() => load("ControllerList", "sass"),
+        "/react"=> fn() => load("ControllerList", "react"),
     ],
     'POST' => [
         '/loginRequest' => fn() => load('FormList', 'loginRequest')

@@ -1,3 +1,8 @@
+<?php
+   //if (!array_key_exists(array_search($_SESSION['historico'],  ['materia' => 'HTML', "tipo" => "Linguagem de Marcação", "link" => "/html"]),$_SESSION['historico'])) {
+    array_push($_SESSION["historico"],  ['materia' => 'HTML', "tipo" => "Linguagem de Marcação", "link" => "/html"]);
+ //}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -64,15 +69,13 @@
                   pressione o botão "Go Live" no canto inferior direito do VS Code</p>
                 <hr>
                 <h3>Instalação para Windows</h3>
-                <iframe class="suporte_video"
-                  src="https://www.youtube.com/embed/FWnZBah0WLc?si=BAReagCZeBLH5mKz"
+                <iframe class="suporte_video" src="https://www.youtube.com/embed/FWnZBah0WLc?si=BAReagCZeBLH5mKz"
                   title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <hr>
                 <h3>Instalação para Linux</h3>
-                <iframe class="suporte_video"
-                  src="https://www.youtube.com/embed/5_6p8LmC8dQ?si=Cpb4blwTbLAZVh7O"
+                <iframe class="suporte_video" src="https://www.youtube.com/embed/5_6p8LmC8dQ?si=Cpb4blwTbLAZVh7O"
                   title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

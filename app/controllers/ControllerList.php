@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 session_start();
+$_SESSION["historico"];
+$_SESSION['historico']=(array) $_SESSION['historico'];
 class ControllerList
 {
     // !  Redirecionamentos por GET
@@ -54,5 +56,24 @@ class ControllerList
     public function logout(){
         $_SESSION['autenticado']=false;
         return Controller::view("home");
+    }
+    public function info(){
+        return Controller::view("info");
+    }
+    public function css(){
+        return Controller::view("css");
+    }
+    public function bootstrap(){
+        return Controller::view("bootstrap");
+    }
+    public function angular(){
+        return Controller::view("angular");
+    }
+
+    public function sass(){
+        return Controller::view("sass");
+    }
+    public function react(){
+        return Controller::view("react");
     }
 }

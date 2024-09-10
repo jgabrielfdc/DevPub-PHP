@@ -13,7 +13,6 @@ abstract class Controller
     if (!file_exists($viewsPath . "/" . $view . ".php")) {
       throw new \Exception("Não existe essa View<br>");
     }
-
     $templates = new Engine($viewsPath);
     echo $templates->render($view, $data);
   }
