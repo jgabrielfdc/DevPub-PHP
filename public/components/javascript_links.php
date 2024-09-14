@@ -8,3 +8,13 @@
   src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
   integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
   crossorigin="anonymous"></script>
+
+  <script
+  src="bootstrap4/js/bootstrap.min.js"
+  crossorigin="anonymous"></script>
+
+  <script src="features.js" type="text/javascript"></script>
+  <script src="features.js" type="text/javascript">
+      redirectElement('back');
+      Console.Log("Meu Santo Deus")
+    </script>

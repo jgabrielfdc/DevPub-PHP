@@ -5,7 +5,7 @@
 
   <?php include("components/header_links.php") ?>
 
-  <title>Guia de Estudos Júnior</title>
+  <title>DevPub - Login</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <section id="home" class="pt-md-5 bg-sky">
 
       <div id="login" class="mb-0">
-        <form method="post" action="/loginRequest" target="_self">
+        <form method="post" action="/usuario" target="_self">
           <h2>Login</h2>
           <hr>
           <div class="grupo_form form-group">

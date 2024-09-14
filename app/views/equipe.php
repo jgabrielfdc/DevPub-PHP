@@ -58,7 +58,7 @@ h1:after {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
   </style>
-  <title>Guia de Estudos Júnior</title>
+  <title>DevPub - Membros</title>
 </head>
 
 <body>
@@ -67,7 +67,7 @@ h1:after {
   <section class="container bg-light pl-5 pr-5 rounded mt-4 mb-4">
         <div class="row m-3">
             <div class="col-md-12">
-                <h1 class="text-center">Conheça a nossa equipe de desenvolvimento</h1>
+                <h1 class="text-center">Conheça os membros da nossa equipe de desenvolvimento</h1>
             </div>
             <hr>
         </div>

@@ -25,13 +25,13 @@
             <a class="nav-link" href="/equipe">Equipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/intro">Sobre nós</a>
+            <a class="nav-link" href="/intro">Sobre</a>
           </li>
 
           <li class="nav-item">
             <?php
 
-            if ($_SESSION['autenticado'] == true) {
+              if ($_SESSION['autenticado'] == true) {
               echo '<div class="dropdown usuarioFeed float-right">
                       <button class="btn btn-info bg-transparent rounded border-0 shadow-none" data-toggle="dropdown" type="button">
                           <img src="imagens/eduardi.jpeg" class="rounded-circle" width="50" height="50">
@@ -48,6 +48,7 @@
             } else {
               echo "<a href='/login' class='btn btn-light mt-3'><span class='text-secondary'>Entrar</span></a>";
             } 
+            
             ?>
           </li>
 

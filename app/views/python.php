@@ -3,7 +3,7 @@
 
 <head>
     <?php include("components/header_links.php") ?>
-    <title>DevPub - Sass</title>
+    <title>DevPub - Python</title>
 </head>
 
 <body>

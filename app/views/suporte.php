@@ -3,7 +3,7 @@
 
 <head>
   <?php include("components/header_links.php") ?>
-  <title>Guia de Estudos Júnior</title>
+  <title>DevPub - Suporte</title>
 </head>
 
 <body>

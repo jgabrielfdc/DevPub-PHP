@@ -1,14 +1,9 @@
-<?php
-//if (!array_key_exists(array_search($_SESSION['historico'], ['materia'=>'SQL',"tipo"=>"Linguagem de Programação","link"=>"/sql"]),$_SESSION['historico'])) {
-array_push($_SESSION["historico"], ['materia' => 'CSS', "tipo" => "Linguagem de Estilização", "link" => "/css"]);
-//}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <?php include("components/header_links.php") ?>
-    <title>Guia de Estudos Júnior</title>
+    <title>DevPub - CSS</title>
 </head>
 
 <body>

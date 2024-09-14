@@ -368,14 +368,14 @@ form input[type='password']{
     -moz-box-shadow: 9px 11px 14px -1px rgba(0,0,0,0.46);
     box-shadow: 9px 11px 14px -1px rgba(0,0,0,0.46);
 
-    border:2px double black;
+    border:2px double rgb(73, 73, 73);
 
     transform:scale(1,1);
     transition: 1s all;
 }
 
 .divisa{
-    border-top:2px double black;
+    border-top:2px double rgb(54, 54, 54);
 }
 
 .card_titulo{
@@ -388,16 +388,28 @@ form input[type='password']{
 }
 /* Estilo Personalizado Botões*/
 .sql{
-    color: orangered;
+    color: #fa6a36;
     background-color: transparent;
     background-image: none;
-    border-color: orangered;
+    border-color: #fa6a36;
 }
 
-.sql:hover{
+.btn-outline-black{
+    color: #000;
+    background-color: transparent;
+    background-image: none;
+    border-color: #000;
+}
+
+
+.btn-outline-black:hover{
     color: #fff;
-    background-color: orangered;
-    border-color: orangered;
+    background-color: #000;
+    border-color: #000;
+}
+
+.text-black{
+    color:#000;
 }
 
 .py{
@@ -613,7 +625,34 @@ section.bg-sky{
 }
 
 .card-imagem{
-    background-repeat:no-repeat; 
-    background-size:cover;
-     height: 150px;
+    background-repeat:no-repeat !important; 
+    background-size:cover !important;
+    background-position:center !important;
+    height:150px;
+    width: 300px;
+}
+
+.sombra{
+    box-shadow: #949494 1px 2px 10px;
+}
+
+.teste{
+    justify-content: space-evenly !important;
+}
+
+.sombra .btn, .sombra .card-title, .sombra p, .sombra h2{
+    text-shadow: none;
+}
+
+.sombra-dentro{
+    box-shadow:inset #949494 1px 2px 10px;
+}
+
+.sombra-dentro .btn, .sombra-dentro .card-title, .sombra-dentro p, .sombra-dentro h2{
+    text-shadow: none;
+}
+
+.scroll{
+    max-height:500px; 
+    overflow-y:scroll;
 }

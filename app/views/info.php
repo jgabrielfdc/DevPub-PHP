@@ -2,5 +2,8 @@
 require("components/header_links.php");
 require("components/menu.php");
 phpinfo();
-unset($_SESSION['historico']);
+use mysqli;
+$conn=new mysqli("localhost", "root","","devpub");
+mysqli_init();
+
 ?>

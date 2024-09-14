@@ -3,7 +3,7 @@
 
 <head>
   <?php require("components/header_links.php") ?>
-  <title>Guia de Estudos Júnior</title>
+  <title>DevPub - Apresentação</title>
 </head>
 
 <body class="bg-sky">
@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row p-3">
         <div class="col-12 introducao bg-light">
-          <h2 class="text-center p-3">O que é esse site?</h2>
+          <h2 class="text-center p-3">Nos conheça melhor!!</h2>
           <hr class="bg-dark">
           <div class="col-12 clearfix">
             <div class="col-12 float-md-left m-2 team-member text-center m-2 mb-3">

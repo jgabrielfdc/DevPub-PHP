@@ -1,14 +1,9 @@
-<?php
-   //if (!array_key_exists(array_search($_SESSION['historico'],  ['materia' => 'HTML', "tipo" => "Linguagem de Marcação", "link" => "/html"]),$_SESSION['historico'])) {
-    array_push($_SESSION["historico"],  ['materia' => 'HTML', "tipo" => "Linguagem de Marcação", "link" => "/html"]);
- //}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <?php require("components/header_links.php") ?>
-  <title>Guia de Estudos Júnior</title>
+  <title>DevPub - HTML</title>
 </head>
 
 <body>

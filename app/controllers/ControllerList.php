@@ -2,78 +2,159 @@
 
 namespace app\controllers;
 
-session_start();
-$_SESSION["historico"];
-$_SESSION['historico']=(array) $_SESSION['historico'];
+use Error;
+use Exception;
+
+require("../app/processadores/PerfilUsuario.php");
+use function Perfil\validaHistorico;
+if (!isset($_SESSION)) {
+    session_start();
+} else {
+    $_SESSION['autenticado'] = false;
+}
+
+
 class ControllerList
 {
-    // !  Redirecionamentos por GET
-    public function index()
+    // !  Redirecionamentos por GET 
+    // * (URL, Link)
+    public function index($params)
     {
-        return Controller::view('home');
+        if (isset($_SESSION['historico'])) {
+            $_SESSION['historico'] = (array) $_SESSION['historico'];
+        }
+        return Controller::view('home', $params);
     }
-    public function suporte()
+    public function suporte($params)
     {
-        return Controller::view("suporte");
+        return Controller::view("suporte", $params);
     }
-    public function materiais()
+    public function materiais($params)
     {
-        return Controller::view("materiais");
+        return Controller::view("materiais",(array)$params);
     }
-    public function usuario()
+    public function usuario($params)
     {
-        return Controller::view("usuario");
+           if($_SESSION['autenticado']==true){
+            $_SESSION['dataFimSessao']=Date("d/m/Y");
+            $_SESSION['historico']=(array) $_SESSION['historico'];
+            return Controller::view("usuario",(array)$params);
+           }else{
+            return Controller::view('login',(array)$params);
+           }
     }
-    public function login()
+    public function login($params)
     {
-        return Controller::view("login");
+        return Controller::view("login",(array)$params);
     }
 
-    public function cadastro()
+    public function cadastro($params)
     {
-        return Controller::view("cadastro");
+        return Controller::view("cadastro",(array)$params);
     }
 
-    public function html()
+
+    public function intro($params)
     {
-        return Controller::view("html");
+        return Controller::view("intro",(array)$params);
     }
 
-    public function intro()
+    public function equipe($params)
     {
-        return Controller::view("intro");
+        return Controller::view("equipe",(array)$params);
     }
 
-    public function equipe()
+    // ! Funções de Debug, ou executaveis
+    public function logout($params)
     {
-        return Controller::view("equipe");
+        $_SESSION['autenticado'] = false;
+        $_SESSION['historico'] = null;
+        return Controller::view('home',(array)$params);
     }
-    public function sql()
+    public function info()
     {
-        return Controller::view("sql");
-    }
-
-    public function logout(){
-        $_SESSION['autenticado']=false;
-        return Controller::view("home");
-    }
-    public function info(){
         return Controller::view("info");
     }
-    public function css(){
-        return Controller::view("css");
+
+    // * Páginas
+    public function sql($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'SQL', "tipo" => "Linguagem de Programação", "link" => "/sql"]);
+        }
+        return Controller::view("sql",(array)$params);
     }
-    public function bootstrap(){
-        return Controller::view("bootstrap");
+    public function css($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'CSS', "tipo" => "Linguagem de Estilização", "link" => "/css"]);
+        }
+        return Controller::view("css",(array)$params);
     }
-    public function angular(){
-        return Controller::view("angular");
+    public function bootstrap($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'Bootstrap', "tipo" => "Framework", "link" => "/bootstrap"]);
+        }
+        return Controller::view("bootstrap",(array)$params);
+    }
+    public function angular($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'Angular', "tipo" => "Framework", "link" => "/angular"]);
+        }
+        return Controller::view("angular",(array)$params);
+    }
+    public function sass($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'Sass', "tipo" => "Biblioteca", "link" => "/sass"]);
+        }
+        return Controller::view("sass",(array)$params);
+    }
+    public function react($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'React', "tipo" => "Biblioteca", "link" => "/react"]);
+        }
+        return Controller::view("react",(array)$params);
+    }
+    public function html($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'HTML', "tipo" => "Linguagem de Marcação", "link" => "/html"]);
+        }
+        return Controller::view("html",(array)$params);
+    }
+    public function python($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'Python', "tipo" => "Linguagem de Programação", "link" => "/python"]);
+        }
+        return Controller::view("python",(array)$params);
     }
 
-    public function sass(){
-        return Controller::view("sass");
+    public function js($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'JavaScript', "tipo" => "Linguagem de Programação", "link" => "/js"]);
+        }
+        return Controller::view("js",(array)$params);
     }
-    public function react(){
-        return Controller::view("react");
+
+    public function java($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'Java', "tipo" => "Linguagem de Programação", "link" => "/java"]);
+        }
+        return Controller::view("java",(array)$params);
+    }
+
+    public function csharp($params)
+    {
+        if (isset($_SESSION['historico']) && $_SESSION['autenticado'] == true) {
+            validaHistorico(['materia' => 'C-Sharp', "tipo" => "Linguagem de Programação", "link" => "/csharp"]);
+        }
+        return Controller::view("csharp",(array)$params);
     }
 }

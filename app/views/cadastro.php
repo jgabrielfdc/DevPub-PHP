@@ -4,7 +4,7 @@
 <head>
   <?php require("components/header_links.php") ?>
 
-  <title>Guia de Estudos Júnior</title>
+  <title>DevPub - Cadastro</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
   <center>
     <section class="pt-5 bg-sky">
       <div id="cadastro" class="pb-5 ">
-        <form method="post" action="/loginRequest" target="_self">
+        <form method="post" action="/cadastro" target="_self">
           <h2>Cadastro</h2>
           <hr>
           <div class="grupo_form form-group">

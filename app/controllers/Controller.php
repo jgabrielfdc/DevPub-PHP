@@ -1,5 +1,4 @@
 <?php
-
 namespace app\controllers;
 
 use League\Plates\Engine;
@@ -14,10 +13,8 @@ abstract class Controller
       throw new \Exception("Não existe essa View<br>");
     }
     $templates = new Engine($viewsPath);
-    echo $templates->render($view, $data);
+    echo $templates->render($view, (array)$data);
   }
-  public function login($params)
-  {
-    
-  }
+  public static function login()
+  {   }
 }

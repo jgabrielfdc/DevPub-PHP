@@ -1,14 +1,9 @@
-<?php
-//if (!array_key_exists(array_search($_SESSION['historico'], ['materia'=>'SQL',"tipo"=>"Linguagem de Programação","link"=>"/sql"]),$_SESSION['historico'])) {
-array_push($_SESSION["historico"], ['materia' => 'React', "tipo" => "Biblioteca", "link" => "/react"]);
-//}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <?php include("components/header_links.php") ?>
-    <title>Guia de Estudos Júnior</title>
+    <title>DevPub - React</title>
 </head>
 
 <body>
@@ -23,7 +18,7 @@ array_push($_SESSION["historico"], ['materia' => 'React', "tipo" => "Biblioteca"
                         <center>
                             <h1>Em Breve...</h1>
                         </center>
-                    </div>
+                    </div>z
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <?php
-require("../app/processadores/PerfilUsuario.php");
 use function Perfil\cardsSalvos;
 use function Perfil\feedCards;
+use Illuminate\Support\Facades\Route;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,7 +12,7 @@ use function Perfil\feedCards;
     <style>
 
     </style>
-    <title>Guia de Estudos Júnior</title>
+    <title>DevPub - Perfil do Usuario</title>
 </head>
 
 <body>
@@ -31,8 +31,8 @@ use function Perfil\feedCards;
                 <div class="col-md-8">
                     <h2>Eduardo Nascimento Viana</h2>
                     <p>Data de Criação: 15/06/2024</p>
-                    <p>Ultima Sessão: 17/06/2024</p>
-                    <p>Email: Aberto</p>
+                    <p>Ultima Sessão: <?php if(isset($_SESSION['dataFimSessao'])){echo $_SESSION['dataFimSessao'];}?></p>
+                    <p>Email: <?php if(!empty($_POST['email'])){echo $_POST['email'];}else{echo "Não Informado";};?></p>
                     <p>Area de Interesse: Aberto</p>
                 </div>
             </div>
